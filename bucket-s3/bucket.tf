@@ -10,6 +10,6 @@ resource "aws_s3_bucket" "bucket_terraform" {
 resource "aws_s3_bucket_versioning" "bucket_terraform_versioning" {
   bucket = aws_s3_bucket.bucket_terraform.id
   versioning_configuration {
-    status = "Disable"
+    status = "Enabled"
   }
 }
