@@ -6,3 +6,10 @@ resource "aws_s3_bucket" "bucket_terraform" {
     Environment = "DevOps"
   }
 }
+
+resource "aws_s3_bucket_versioning" "bucket_terraform_versioning" {
+  bucket = aws_s3_bucket.bucket_terraform.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
