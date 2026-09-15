@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket_terraform" {
-  bucket = "bucket-by-terraform-s3-luanvieira"
+  bucket = var.bucket_name
 
   tags = {
     Name        = "terraform_bucket"
