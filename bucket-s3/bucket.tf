@@ -1,8 +1,8 @@
-resource "aws_s3_bucket" "bucketterraform" {
-  bucket = "bucket_by_terraform"
+resource "aws_s3_bucket" "bucket_terraform" {
+  bucket = "buckettf"
 
   tags = {
-    Name        = "terraform-bucket"
+    Name        = "terraform_bucket"
     Environment = "DevOps"
   }
 }
