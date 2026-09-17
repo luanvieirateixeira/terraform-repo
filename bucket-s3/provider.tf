@@ -17,7 +17,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      owner = "luan_vieira"
+      owner      = "luan_vieira"
       managed_by = "terraform"
     }
   }
