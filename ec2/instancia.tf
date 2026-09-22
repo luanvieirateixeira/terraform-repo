@@ -3,8 +3,9 @@ resource "aws_instance" "EC2-Terraform" {
   instance_type = "t3.micro"
   availability_zone = "us-east-1a"
   key_name = data.aws_key_pair.terraform-key.key_name
-  subnet_id = output.subnet_id_terraform
-  security_groups = output.subnet_id_terraform
+  subnet_id = terraform_remote_state.network.outputs.subnet_id_terraform
+  security_groups = terraform_remote_state.network.outputs.security_group_id_terraform
+  associate_public_ip_address = true
 
   
   root_block_device{
