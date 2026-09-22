@@ -5,6 +5,7 @@ resource "aws_instance" "EC2-Terraform" {
   subnet_id                   = data.terraform_remote_state.network.outputs.subnet_id_terraform
   security_groups             = [data.terraform_remote_state.network.outputs.security_group_id_terraform]
   associate_public_ip_address = true
+  availability_zone = "us-east-1a"
 
 
   root_block_device {
