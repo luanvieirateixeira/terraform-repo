@@ -1,6 +1,6 @@
 resource "aws_security_group" "security_group_terraform" {
   name        = "Security_group_terraform"
-  description = "Permite conexão SSH, ICMP e trafego por toda internet"
+  description = "Permite conexao SSH ICMP e trafego por toda internet"
   vpc_id      = aws_vpc.vpc_terraform.id
 
   tags = {
