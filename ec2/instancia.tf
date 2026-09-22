@@ -3,8 +3,8 @@ resource "aws_instance" "EC2-Terraform" {
   instance_type = "t3.micro"
   availability_zone = "us-east-1a"
   key_name = data.aws_key_pair.terraform-key.key_name
-  security_groups = output.subnet_id
-  subnet_id = security_group_id_terraform
+  subnet_id = output.subnet_id_terraform
+  security_groups = output.subnet_id_terraform
 
   
   root_block_device{
