@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" { #Bucket que será armazenado o terraform.state
     bucket = "luan-terraformlabs"
-    key    = "s3-terraform/terraform.tfstate"
+    key    = "ec2-terraform/terraform.tfstate"
     region = "us-east-1"
   }
 }
