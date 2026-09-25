@@ -5,7 +5,7 @@ resource "aws_instance" "EC2-Terraform" {
   subnet_id                   = var.subnet_id_vpc
   security_groups             = [var.sg_id_vpc]
   associate_public_ip_address = true
-  availability_zone = "us-east-1a"
+  availability_zone           = "us-east-1a"
 
 
   root_block_device {

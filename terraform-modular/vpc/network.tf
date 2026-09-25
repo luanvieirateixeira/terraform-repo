@@ -7,8 +7,8 @@ resource "aws_vpc" "vpc_terraform" {
 }
 
 resource "aws_subnet" "subnet_terraform" {
-  vpc_id     = aws_vpc.vpc_terraform.id
-  cidr_block = var.cidr_subnet
+  vpc_id            = aws_vpc.vpc_terraform.id
+  cidr_block        = var.cidr_subnet
   availability_zone = "us-east-1a"
 
   tags = {
