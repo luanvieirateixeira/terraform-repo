@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" { #Bucket que será armazenado o terraform.state
     bucket = "luan-terraformlabs"
-    key    = "ec2-aws/terraform.tfstate"
+    key    = "terraform-modular/terraform.tfstate"
     region = "us-east-1"
   }
 }
@@ -15,13 +15,3 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
-
-data "terraform_remote_state" "network" {
-  backend = "s3"
-  config = {
-    bucket = "luan-terraformlabs"
-    key    = "ec2-terraform/terraform.tfstate"
-    region = "us-east-1"
-  }
-}
-

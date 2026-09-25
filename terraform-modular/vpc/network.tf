@@ -1,5 +1,5 @@
 resource "aws_vpc" "vpc_terraform" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.cidr_vpc
 
   tags = {
     Name = "VPC-terraform"
@@ -8,7 +8,7 @@ resource "aws_vpc" "vpc_terraform" {
 
 resource "aws_subnet" "subnet_terraform" {
   vpc_id     = aws_vpc.vpc_terraform.id
-  cidr_block = "10.0.1.0/24"
+  cidr_block = var.cidr_subnet
   availability_zone = "us-east-1a"
 
   tags = {
